@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+ * Validate login and registration
+ */
 class Validate {
     public static func isEmpty(text: String?) -> (data: String?, error: String?) {
         guard let txt = text , txt != "" else { return (nil, "text field is required.") }

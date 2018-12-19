@@ -8,7 +8,13 @@
 
 import UIKit
 
+/**
+ * Controls the register view
+ */
 class RegisterViewController: UIViewController {
+    // MARK: - Properties
+    
+    // MARK: Outlets
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var emailErrorNotifLabel: UILabel!
     @IBOutlet weak var emailErrorLabel: UILabel!
@@ -25,6 +31,7 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var confirmPasswordErrorNotifLabel: UILabel!
     @IBOutlet weak var confirmPasswordErrorLabel: UILabel!
     
+    // MARK: Local variables
     private let acceptedCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*_"
     private let minPasswordLength = 6
     private let maxPasswordLength = 14
@@ -36,6 +43,9 @@ class RegisterViewController: UIViewController {
         clear()
     }
     
+    // MARK: - Functions
+    
+    // MARK: Actions
     @IBAction func generatePasswordPressed(_ sender: Any) {
         do {
             let randomPW = try RandomPasswordGenerator(minLength: minPasswordLength, maxLength: maxPasswordLength, acceptedCharacters: acceptedCharacters, uppercase: rules, lowercase: rules, numeric: rules, specialCharacter: rules)
@@ -59,6 +69,7 @@ class RegisterViewController: UIViewController {
         clear()
     }
     
+    // MARK: Helper functions
     private func performRegister() {
         hasError = false
         let email = Validate.isEmpty(text: emailTextField.text)
@@ -88,7 +99,7 @@ class RegisterViewController: UIViewController {
             hasError = true
         }
         if hasError { return }
-        // MARK - TODO: Try to register through database
+        // MARK: - TODO: Try to register through database
         print(emailAddress, confirmEmailAddress, pwd, confirmPwd)
     }
     
@@ -125,6 +136,9 @@ class RegisterViewController: UIViewController {
     }
 }
 
+// MARK: - Extensions
+
+// MARK: Extends UITextFieldDelegate Protocols
 extension RegisterViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField.tag == 0 {

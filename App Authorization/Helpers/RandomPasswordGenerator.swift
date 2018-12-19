@@ -13,6 +13,7 @@ import Foundation
  * If no rules are specified, the password is generated
  */
 public class RandomPasswordGenerator {
+    // MARK: - Properties
     private var minLength: Int!
     private var maxLength: Int!
     private var acceptedCharacters: String!
@@ -24,6 +25,7 @@ public class RandomPasswordGenerator {
     private let RUNTIME_ERROR_LESS_THAN_ZERO = "Enter a positive number above zero, nil, or exclude from RandomPasswordGenerator init."
     private let RUNTIME_ERROR_MORE_THAN_MIN_LENGTH = "Enter a positive number less than the minimum password length, nil, or exclude from RandomPasswordGenerator init."
     
+    // MARK: - Controctor
     init(minLength: Int, maxLength: Int, acceptedCharacters: String, uppercase: Int? = nil, lowercase: Int? = nil, numeric: Int? = nil, specialCharacter: Int? = nil) throws {
         self.minLength = minLength
         self.maxLength = maxLength
@@ -66,6 +68,7 @@ public class RandomPasswordGenerator {
         }
     }
     
+    // MARK: - Functions
     public func getPassword() -> String {
         let length = Int.random(in: minLength...maxLength)
         let password = String((0...length).compactMap{ _ in acceptedCharacters.randomElement() })
@@ -100,6 +103,9 @@ public class RandomPasswordGenerator {
     }
 }
 
+/**
+ * Struct to override Error to add custom error messages to be thrown
+ */
 struct RuntimeError: Error {
     let message: String
     

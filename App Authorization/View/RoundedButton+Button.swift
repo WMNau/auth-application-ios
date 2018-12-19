@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+ * Add rounded corners to buttons
+ */
 @IBDesignable class RoundedButton: UIButton {
     @IBInspectable var cornerRadius: CGFloat = 4.0 {
         didSet {
