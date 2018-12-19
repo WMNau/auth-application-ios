@@ -12,8 +12,6 @@
 		2718015021CA6CD5000AF4F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2718014E21CA6CD5000AF4F0 /* Main.storyboard */; };
 		2718015221CA6CD6000AF4F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2718015121CA6CD6000AF4F0 /* Assets.xcassets */; };
 		2718015521CA6CD6000AF4F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2718015321CA6CD6000AF4F0 /* LaunchScreen.storyboard */; };
-		2718016021CA6CD6000AF4F0 /* App_AuthorizationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2718015F21CA6CD6000AF4F0 /* App_AuthorizationTests.swift */; };
-		2718016B21CA6CD6000AF4F0 /* App_AuthorizationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2718016A21CA6CD6000AF4F0 /* App_AuthorizationUITests.swift */; };
 		2718018021CA6D99000AF4F0 /* RandomPasswordGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2718017F21CA6D99000AF4F0 /* RandomPasswordGenerator.swift */; };
 		2718018221CA8C8B000AF4F0 /* RoundedButton+Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2718018121CA8C8B000AF4F0 /* RoundedButton+Button.swift */; };
 		2718018421CA9DEA000AF4F0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2718018321CA9DEA000AF4F0 /* LoginViewController.swift */; };
@@ -46,11 +44,7 @@
 		2718015421CA6CD6000AF4F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2718015621CA6CD6000AF4F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2718015B21CA6CD6000AF4F0 /* App AuthorizationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "App AuthorizationTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2718015F21CA6CD6000AF4F0 /* App_AuthorizationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App_AuthorizationTests.swift; sourceTree = "<group>"; };
-		2718016121CA6CD6000AF4F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2718016621CA6CD6000AF4F0 /* App AuthorizationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "App AuthorizationUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2718016A21CA6CD6000AF4F0 /* App_AuthorizationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App_AuthorizationUITests.swift; sourceTree = "<group>"; };
-		2718016C21CA6CD6000AF4F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2718017F21CA6D99000AF4F0 /* RandomPasswordGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomPasswordGenerator.swift; sourceTree = "<group>"; };
 		2718018121CA8C8B000AF4F0 /* RoundedButton+Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RoundedButton+Button.swift"; sourceTree = "<group>"; };
 		2718018321CA9DEA000AF4F0 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -86,8 +80,6 @@
 			isa = PBXGroup;
 			children = (
 				2718014921CA6CD5000AF4F0 /* App Authorization */,
-				2718015E21CA6CD6000AF4F0 /* App AuthorizationTests */,
-				2718016921CA6CD6000AF4F0 /* App AuthorizationUITests */,
 				2718014821CA6CD5000AF4F0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -113,24 +105,6 @@
 				2718017921CA6D0A000AF4F0 /* Supporting Files */,
 			);
 			path = "App Authorization";
-			sourceTree = "<group>";
-		};
-		2718015E21CA6CD6000AF4F0 /* App AuthorizationTests */ = {
-			isa = PBXGroup;
-			children = (
-				2718015F21CA6CD6000AF4F0 /* App_AuthorizationTests.swift */,
-				2718016121CA6CD6000AF4F0 /* Info.plist */,
-			);
-			path = "App AuthorizationTests";
-			sourceTree = "<group>";
-		};
-		2718016921CA6CD6000AF4F0 /* App AuthorizationUITests */ = {
-			isa = PBXGroup;
-			children = (
-				2718016A21CA6CD6000AF4F0 /* App_AuthorizationUITests.swift */,
-				2718016C21CA6CD6000AF4F0 /* Info.plist */,
-			);
-			path = "App AuthorizationUITests";
 			sourceTree = "<group>";
 		};
 		2718017921CA6D0A000AF4F0 /* Supporting Files */ = {
@@ -337,7 +311,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2718016021CA6CD6000AF4F0 /* App_AuthorizationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,7 +318,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2718016B21CA6CD6000AF4F0 /* App_AuthorizationUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
